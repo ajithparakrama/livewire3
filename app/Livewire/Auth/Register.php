@@ -21,6 +21,8 @@ class Register extends Component
     ];
 }
 
+//test
+
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
