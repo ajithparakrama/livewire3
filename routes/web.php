@@ -26,3 +26,15 @@ Route::get('/', function(){
 Route::get('register', function () { 
     return view('register');
 });
+
+Route::get('text',function(){
+    return view('text-input');
+});
+
+Route::get('check',function(){
+    return view('check-box');
+});
+
+Route::get('radio',function(){
+    return view('radio-button');
+});

@@ -71,16 +71,16 @@ class RegistrationTest extends TestCase
      public function test_email_hasnt_allrady_been_taken_validation_message_as_user_type(){
 
       User::create([
-          'email'=>'ajith@gmail.com',
+          'email'=>'ajith1@gmail.com',
           'name'=>'name',
           'password'=>Hash::make('password')
       ]);
 
 
       Livewire::test('auth.register')
-      ->set('email','ajith1@gmail.com')
-      ->assertHasNoErrors()
       ->set('email','ajith@gmail.com')
+      ->assertHasNoErrors()
+      ->set('email','ajith1@gmail.com')
       ->assertHasErrors();
    }
 
